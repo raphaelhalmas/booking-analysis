@@ -88,6 +88,48 @@
                         <PropertyPath>BookingDateYear</PropertyPath>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="FilterFlightBookingPriceByYear">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="{@i18n>filterFlightBookingPriceByYear}"/>
+                        <PropertyValue Property="Description" String="{@i18n>filterFlightBookingPriceByYear}"/>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>BookingDateYear</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>FlightPrice</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant" Qualifier="PresentationVariantFlightBookingPriceByYear">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#FilterFlightBookingPriceByYear</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zfe_booking_analytics_000099.BookingType/BookingDateYear">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Booking"/>
+                        <PropertyValue Property="PresentationVariantQualifier" String="PresentationVariantFlightBookingPriceByYear"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="BookingDateYear"/>
+                                    <PropertyValue Property="ValueListProperty" String="BookingDateYear"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>

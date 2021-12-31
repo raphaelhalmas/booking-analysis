@@ -114,6 +114,32 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="FilterFlightBookingPriceByCustomer">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="{@i18n>filterFlightBookingPriceByCustomer}"/>
+                        <PropertyValue Property="Description" String="{@i18n>filterFlightBookingPriceByCustomer}"/>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>CustomerID</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>FlightPrice</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant" Qualifier="PresentationVariantFlightBookingPriceByCustomer">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#FilterFlightBookingPriceByCustomer</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="cds_zfe_booking_analytics_000099.BookingType/BookingDateYear">
                 <Annotation Term="Common.ValueList">
@@ -125,6 +151,22 @@
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="BookingDateYear"/>
                                     <PropertyValue Property="ValueListProperty" String="BookingDateYear"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zfe_booking_analytics_000099.BookingType/CustomerID">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Booking"/>
+                        <PropertyValue Property="PresentationVariantQualifier" String="PresentationVariantFlightBookingPriceByCustomer"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CustomerID"/>
+                                    <PropertyValue Property="ValueListProperty" String="CustomerID"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>

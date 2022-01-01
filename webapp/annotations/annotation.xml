@@ -182,6 +182,7 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="Common.FilterDefaultValue" String="2021" />
             </Annotations>
             <Annotations Target="cds_zfe_booking_analytics_000099.BookingType/CustomerID">
                 <Annotation Term="Common.ValueList">

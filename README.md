@@ -1,2 +1,2 @@
 # Aplicação Fiori para análise de reservas
-Projeto proposto no curso Developing and Extending SAP Fiori Elements Apps da openSAP para estudo relacionado à criação de uma aplicação Fiori para análise de reservas
+Projeto proposto no curso Developing and Extending SAP Fiori Elements Apps da openSAP para estudo relacionado à criação de uma aplicação Fiori para análise de reservas utilizando o floorplan Analytical List Page
